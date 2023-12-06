@@ -3,7 +3,6 @@
 
 # Deep Neural Network for Image Classification: Application
 
-import sys
 import numpy as np
 from dnn_app_utils_v3 import *
 
@@ -121,53 +120,3 @@ def L_layer_model(X, Y, layers_dims, learning_rate = 0.0075, num_iterations = 30
             costs.append(cost)
     
     return parameters, costs
-
-def main() -> int:
-    ## Load and prepare data
-
-    train_x_orig, train_y, test_x_orig, test_y, classes = load_data()
-
-    # Reshape the training and test examples 
-    train_x_flatten = train_x_orig.reshape(train_x_orig.shape[0], -1).T   # The "-1" makes reshape flatten the remaining dimensions
-    test_x_flatten = test_x_orig.reshape(test_x_orig.shape[0], -1).T
-
-    # Standardize data to have feature values between 0 and 1.
-    train_x = train_x_flatten/255.
-    test_x = test_x_flatten/255.
-
-    ## 2-layer model
-
-    # Constants defining the 2-layer model
-    n_x = 12288     # num_px * num_px * 3
-    n_h = 7
-    n_y = 1
-    layers_dims = (n_x, n_h, n_y)
-
-    # train the 2-layer model
-    parameters, costs = two_layer_model(train_x, train_y, layers_dims = (n_x, n_h, n_y), num_iterations = 2, print_cost=False)
-    parameters, costs = two_layer_model(train_x, train_y, layers_dims = (n_x, n_h, n_y), num_iterations = 2500, print_cost=True)
-
-    # Show results on training and test data using the 2-layer model
-    predictions_train = predict(train_x, train_y, parameters)
-    print(f'predictions_train: {predictions_train}')
-    predictions_test = predict(test_x, test_y, parameters)
-    print(f'predictions_test: {predictions_test}')
-
-    ## 2-layer model
-
-    # Constants for a 4-layer model
-    layers_dims = [12288, 20, 7, 5, 1]
-
-    # train the 4-layer model
-    parameters, costs = L_layer_model(train_x, train_y, layers_dims, num_iterations = 1, print_cost = False)
-    parameters, costs = L_layer_model(train_x, train_y, layers_dims, num_iterations = 2500, print_cost = True)
-
-    # Show results on training and test data using the 4-layer model
-    pred_train = predict(train_x, train_y, parameters)
-    print(f'pred_train: {pred_train}')
-    pred_test = predict(test_x, test_y, parameters)
-    print(f'pred_test: {pred_test}')
-    print_mislabeled_images(classes, test_x, test_y, pred_test)
-
-if __name__ == '__main__':
-    sys.exit(main())

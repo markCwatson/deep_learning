@@ -3,11 +3,10 @@
 
 # # Initialization
 
-import sys
 import numpy as np
 import matplotlib.pyplot as plt
 from init_utils import compute_loss, forward_propagation, backward_propagation
-from init_utils import update_parameters, predict, load_dataset, plot_decision_boundary, predict_dec
+from init_utils import update_parameters
 
 """
 Implements a three-layer neural network: LINEAR->RELU->LINEAR->RELU->LINEAR->SIGMOID.
@@ -134,60 +133,3 @@ def initialize_parameters_he(layers_dims):
         parameters['b' + str(l)] = np.zeros((layers_dims[l], 1))
         
     return parameters
-
-def main() -> int:
-    train_X, train_Y, test_X, test_Y = load_dataset()
-
-    ## First try zero initialization
-
-    # train model on 15,000 iterations using zeros initialization.
-    parameters = initialize_parameters_zeros([3, 2, 1])
-    parameters = model(train_X, train_Y, initialization = "zeros")
-    predictions_train = predict(train_X, train_Y, parameters)
-    predictions_test = predict(test_X, test_Y, parameters)
-
-    # The performance is terrible, the cost doesn't decrease, and the algorithm performs no better than random guessing. Why? Take a look at the details of the predictions and the decision boundary:
-    print (predictions_train)
-    print(predictions_test)
-    plt.title("Model with Zeros initialization")
-    axes = plt.gca()
-    axes.set_xlim([-1.5,1.5])
-    axes.set_ylim([-1.5,1.5])
-    plot_decision_boundary(lambda x: predict_dec(parameters, x.T), train_X, train_Y)
-
-    ## now use random initialization
-
-    # Run the following code to train your model on 15,000 iterations using random initialization.
-    parameters = initialize_parameters_random([3, 2, 1])
-    parameters = model(train_X, train_Y, initialization = "random")
-    predictions_train = predict(train_X, train_Y, parameters)
-    predictions_test = predict(test_X, test_Y, parameters)
-
-    # gives noticeably better accuracy
-    print (predictions_train)
-    print(predictions_test)
-    plt.title("Model with large random initialization")
-    axes = plt.gca()
-    axes.set_xlim([-1.5,1.5])
-    axes.set_ylim([-1.5,1.5])
-    plot_decision_boundary(lambda x: predict_dec(parameters, x.T), train_X, train_Y)
-
-    ## Use He initialization
-
-    # Run the following code to train your model on 15,000 iterations using He initialization.
-    parameters = initialize_parameters_he([2, 4, 1])
-    parameters = model(train_X, train_Y, initialization = "he")
-    predictions_train = predict(train_X, train_Y, parameters)
-    predictions_test = predict(test_X, test_Y, parameters)
-
-    # best
-    print (predictions_train)
-    print(predictions_test)
-    plt.title("Model with He initialization")
-    axes = plt.gca()
-    axes.set_xlim([-1.5,1.5])
-    axes.set_ylim([-1.5,1.5])
-    plot_decision_boundary(lambda x: predict_dec(parameters, x.T), train_X, train_Y)
-
-if __name__ == '__main__':
-    sys.exit(main())

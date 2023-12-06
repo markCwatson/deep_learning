@@ -3,11 +3,10 @@
 
 # Planar data classification with one hidden layer
 
-import sys
 import numpy as np
 import copy
 import matplotlib.pyplot as plt
-from planar_utils import plot_decision_boundary, sigmoid, load_planar_dataset
+from planar_utils import sigmoid
 
 """
 Arguments:
@@ -235,23 +234,3 @@ def predict(parameters, X):
     predictions = (A2 > 0.5)
     
     return predictions
-
-
-def main() -> int:
-    # Load and visualize the Dataset 
-    X, Y = load_planar_dataset()
-    plt.scatter(X[0, :], X[1, :], c=Y, s=40, cmap=plt.cm.Spectral)
-
-    # Build a model with a n_h-dimensional hidden layer
-    parameters = nn_model(X, Y, n_h = 4, num_iterations = 10000, print_cost=True)
-
-    # Plot the decision boundary
-    plot_decision_boundary(lambda x: predict(parameters, x.T), X, Y)
-    plt.title("Decision Boundary for hidden layer size " + str(4))
-
-    # Print accuracy
-    predictions = predict(parameters, X)
-    print ('Accuracy: %d' % float((np.dot(Y, predictions.T) + np.dot(1 - Y, 1 - predictions.T)) / float(Y.size) * 100) + '%')
-
-if __name__ == '__main__':
-    sys.exit(main())
