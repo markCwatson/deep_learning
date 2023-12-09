@@ -1,6 +1,8 @@
 #!/usr/bin/env python
 # coding: utf-8
 
+# Putting it all together: Implementing a deep neural netowrk
+
 import numpy as np
 import matplotlib.pyplot as plt
 from dnn_utils import sigmoid, sigmoid_backward, relu, relu_backward

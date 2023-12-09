@@ -6,7 +6,6 @@
 import numpy as np
 import math
 
-
 """
 Update parameters using one step of gradient descent
 
