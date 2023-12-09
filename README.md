@@ -9,3 +9,5 @@ I am also considering doing the [Artificial Intelligence Professional Program fr
 
 ## Courses
 1. [Deep Learning Specialization by Andrew Ng (Coursera)](https://github.com/markCwatson/deep_learning/tree/main/coursera/deep_learning_specialization/)
+2. (starts Feb 4, 2023) [Deep Learning Specialization (Carnegie Mellon University)](https://github.com/markCwatson/deep_learning/tree/main/carnegie_mellon_university/deep_learning/)
+S
