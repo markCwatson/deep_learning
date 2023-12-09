@@ -21,3 +21,6 @@ I am currently enrolled in the [Deep Learning course by Carnegie Mellon Universi
 1. (**Reading**) [Neural Networks and Deep Learning: A Textbook by Charu C. Aggarwal](https://www.amazon.ca/dp/3031296419?psc=1&ref=ppx_yo2ov_dt_b_product_details)
 2. (Unread) [Deep Learning by Ian Goodfellow, Yoshua Bengio, and Aaron Courville ](https://www.amazon.ca/dp/0262035618?psc=1&ref=ppx_yo2ov_dt_b_product_details)
 3. (Unread) [Neural Networks From Scratch By Harrison Kinsley & Daniel Kukiela](https://nnfs.io/)
+
+## Helpful YouTube playlists
+1. [Neural Networks: Zero to Hero by Andrej Karpathy](https://youtube.com/playlist?list=PLAqhIrjkxbuWI23v9cThsA9GvCAUhRvKZ&si=JERfwNOSbS1v1FiE)
