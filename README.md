@@ -8,6 +8,5 @@ I enrolled in the [Deep Learning course by Carnegie Mellon University School of 
 I am also considering doing the [Artificial Intelligence Professional Program from Stanford School of Engineering](https://online.stanford.edu/programs/artificial-intelligence-professional-program). Other than those, I am currently exploring other options. Let me know if you know of any good online/self-paced programs.
 
 ## Courses
-1. [Deep Learning Specialization by Andrew Ng (Coursera)](https://github.com/markCwatson/deep_learning/tree/main/coursera/deep_learning_specialization/)
+1. (in progress) [Deep Learning Specialization by Andrew Ng (Coursera)](https://github.com/markCwatson/deep_learning/tree/main/coursera/deep_learning_specialization/)
 2. (starts Feb 4, 2023) [Deep Learning Specialization (Carnegie Mellon University)](https://github.com/markCwatson/deep_learning/tree/main/carnegie_mellon_university/deep_learning/)
-S
