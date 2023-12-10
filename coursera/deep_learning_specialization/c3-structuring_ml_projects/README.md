@@ -1,0 +1,1 @@
+There were no programming assignments associated with this course.
