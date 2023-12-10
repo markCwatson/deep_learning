@@ -1,9 +1,11 @@
 # Deep Learning (Neural Networks)
 
 ## About
-I have recently (Nov 2023) begun studying deep learning/neural networks. This is a collection of coursework from various deep learning courses I am taking. As of today (Dec 4, 2023), I am currently doing the [Deep Learning Specialization by Andrew Ng on Coursera](https://www.coursera.org/specializations/deep-learning?).
+I have recently (Nov 2023) begun studying deep learning/neural networks. This is a collection of coursework from various deep learning courses I am taking. As of today (Dec 10, 2023), I am currently doing the [Deep Learning Specialization by Andrew Ng on Coursera](https://www.coursera.org/specializations/deep-learning?).
 
 I am currently enrolled in the [Deep Learning course by Carnegie Mellon University School of Computer Science](https://execonline.cs.cmu.edu/deep-learning?utm_source=Google&utm_network=g&utm_medium=c&utm_term=cmu%20deep%20learning&utm_location=9000100&utm_campaign=B-365D_WW_GG_SE_CDL_Brand&utm_content=Deep_Learning&gad_source=1&gclid=CjwKCAiAmsurBhBvEiwA6e-WPNZrFFn0mXa4NsyS7ZZXrDnWpR2fWPxhgCzrMgWorJ7pAHzRwSd9MRoCMy0QAvD_BwE). It starts on **February 8th, 2024**, and it will run for 10 weeks. I will include coursework for this here too.
+
+At the time of this writing (Dec 10, 2023), I am considering using [kaggle](https://www.kaggle.com/) as both an additional learning resource and as a place to practice using real ML problems. I've created an account, and my progress can be viewed ([here](https://www.kaggle.com/markcwatson)).
 
 ## Coursework in this repository (WIP, starting soon, or completed)
 1. (**WIP**) [Deep Learning Specialization by Andrew Ng (Coursera)](https://github.com/markCwatson/deep_learning/tree/main/coursera/deep_learning_specialization/)
