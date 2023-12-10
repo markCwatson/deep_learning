@@ -24,3 +24,4 @@ I am currently enrolled in the [Deep Learning course by Carnegie Mellon Universi
 
 ## Helpful YouTube playlists
 1. [Neural Networks: Zero to Hero by Andrej Karpathy](https://youtube.com/playlist?list=PLAqhIrjkxbuWI23v9cThsA9GvCAUhRvKZ&si=JERfwNOSbS1v1FiE)
+2. [Neural Networks by 3Blue1Brown](https://youtube.com/playlist?list=PLZHQObOWTQDNU6R1_67000Dx_ZCJB-3pi&si=ymLyI-663BybkXoO)
