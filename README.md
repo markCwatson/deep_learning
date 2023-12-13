@@ -3,12 +3,9 @@
 ## About
 I have recently (Nov 2023) begun studying deep learning/neural networks. This is a collection of coursework from various deep learning courses I am taking. As of today (Dec 10, 2023), I am currently doing the [Deep Learning Specialization by Andrew Ng on Coursera](https://www.coursera.org/specializations/deep-learning?).
 
-I am currently enrolled in the [Deep Learning course by Carnegie Mellon University School of Computer Science](https://execonline.cs.cmu.edu/deep-learning?utm_source=Google&utm_network=g&utm_medium=c&utm_term=cmu%20deep%20learning&utm_location=9000100&utm_campaign=B-365D_WW_GG_SE_CDL_Brand&utm_content=Deep_Learning&gad_source=1&gclid=CjwKCAiAmsurBhBvEiwA6e-WPNZrFFn0mXa4NsyS7ZZXrDnWpR2fWPxhgCzrMgWorJ7pAHzRwSd9MRoCMy0QAvD_BwE). It starts on **February 8th, 2024**, and it will run for 10 weeks. I will include coursework for this here too.
-
 ## Table of Contents: (Links to coursework in this repository)
 1. (**WIP**) [Deep Learning Specialization by Andrew Ng (Coursera)](https://github.com/markCwatson/deep_learning/tree/main/coursera/deep_learning_specialization/)
 2. (**WIP**) [Intro to Deep Learning (Kaggle Learn)](https://github.com/markCwatson/deep_learning/tree/main/kaggle/learn/intro_to_deep_learning/)
-3. (Starts Feb 4, 2023) [Deep Learning Specialization (Carnegie Mellon University)](https://github.com/markCwatson/deep_learning/tree/main/carnegie_mellon_university/deep_learning/)
 
 ## Other courses/training/certifications under consideration
 1. [Artificial Intelligence Professional Program from Stanford School of Engineering](https://online.stanford.edu/programs/artificial-intelligence-professional-program)
@@ -18,6 +15,7 @@ I am currently enrolled in the [Deep Learning course by Carnegie Mellon Universi
 5. [Machine Learning Cornell Certificate Program](https://ecornell.cornell.edu/certificates/technology/machine-learning/)
 6. [Machine Learning Specialization by Andrew Ng (Coursera)](https://www.coursera.org/specializations/machine-learning-introduction)
 7. [MITx: Machine Learning with Python: from Linear Models to Deep Learning (edX)](https://www.edx.org/learn/machine-learning/massachusetts-institute-of-technology-machine-learning-with-python-from-linear-models-to-deep-learning?index=product&queryID=ba7a36bf8d6cb28a6767149643e222a7&position=1&results_level=first-level-results&term=Machine+Learning+with+Python%3A+from+Linear+Models+to+Deep+Learning&objectID=course-4c70ad9b-9602-49af-bf00-83fa4bf47708&campaign=Machine+Learning+with+Python%3A+from+Linear+Models+to+Deep+Learning&source=edX&product_category=course&placement_url=https%3A%2F%2Fwww.edx.org%2Fsearch)
+8. [Deep Learning Specialization (Carnegie Mellon University)](https://github.com/markCwatson/deep_learning/tree/main/carnegie_mellon_university/deep_learning/)
 
 ## Books I am reading, have read, or plan to read
 1. (**Reading**) [Neural Networks and Deep Learning: A Textbook by Charu C. Aggarwal](https://www.amazon.ca/dp/3031296419?psc=1&ref=ppx_yo2ov_dt_b_product_details)
