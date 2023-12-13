@@ -7,7 +7,7 @@ I am currently enrolled in the [Deep Learning course by Carnegie Mellon Universi
 
 ## Table of Contents: (Links to coursework in this repository)
 1. (**WIP**) [Deep Learning Specialization by Andrew Ng (Coursera)](https://github.com/markCwatson/deep_learning/tree/main/coursera/deep_learning_specialization/)
-2. (**WIP**) [Intro to Deep Learning (Kaggle)](https://github.com/markCwatson/deep_learning/tree/main/kaggle/learn/intro_to_deep_learning/)
+2. (**WIP**) [Intro to Deep Learning (Kaggle Learn)](https://github.com/markCwatson/deep_learning/tree/main/kaggle/learn/intro_to_deep_learning/)
 3. (Starts Feb 4, 2023) [Deep Learning Specialization (Carnegie Mellon University)](https://github.com/markCwatson/deep_learning/tree/main/carnegie_mellon_university/deep_learning/)
 
 ## Other courses/training/certifications under consideration
@@ -18,7 +18,6 @@ I am currently enrolled in the [Deep Learning course by Carnegie Mellon Universi
 5. [Machine Learning Cornell Certificate Program](https://ecornell.cornell.edu/certificates/technology/machine-learning/)
 6. [Machine Learning Specialization by Andrew Ng (Coursera)](https://www.coursera.org/specializations/machine-learning-introduction)
 7. [MITx: Machine Learning with Python: from Linear Models to Deep Learning (edX)](https://www.edx.org/learn/machine-learning/massachusetts-institute-of-technology-machine-learning-with-python-from-linear-models-to-deep-learning?index=product&queryID=ba7a36bf8d6cb28a6767149643e222a7&position=1&results_level=first-level-results&term=Machine+Learning+with+Python%3A+from+Linear+Models+to+Deep+Learning&objectID=course-4c70ad9b-9602-49af-bf00-83fa4bf47708&campaign=Machine+Learning+with+Python%3A+from+Linear+Models+to+Deep+Learning&source=edX&product_category=course&placement_url=https%3A%2F%2Fwww.edx.org%2Fsearch)
-8. [Tutorials in Kaggle/Learn](https://www.kaggle.com/learn)
 
 ## Books I am reading, have read, or plan to read
 1. (**Reading**) [Neural Networks and Deep Learning: A Textbook by Charu C. Aggarwal](https://www.amazon.ca/dp/3031296419?psc=1&ref=ppx_yo2ov_dt_b_product_details)
