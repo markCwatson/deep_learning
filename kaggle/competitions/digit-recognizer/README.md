@@ -6,7 +6,7 @@ This approach is based off of Andrew Ng's Neural Networks and Deep Learning cour
 
 This approach includes a implementation of a deep neural network utilizing numpy.
 
-With the model presented here, I achieved ~81% accuracy on both the training and test data sets (see snippet of predictions below from test set).
+With the model presented here, I achieved ~84% accuracy on both the training and test data sets (see snippet of predictions below from test set).
 
 ![image info](./preds.png)
 
