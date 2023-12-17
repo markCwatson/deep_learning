@@ -6,6 +6,10 @@ This approach is based off of Andrew Ng's Neural Networks and Deep Learning cour
 
 This approach includes a implementation of a deep neural network utizing numpy.
 
+With the model presented here, I achieved ~81% accuracy on both the training and test data sets (see snippet of predictions below from test set).
+
+![image info](./preds.png)
+
 # Competition Description
 
 MNIST ("Modified National Institute of Standards and Technology") is the de facto “hello world” dataset of computer vision. Since its release in 1999, this classic dataset of handwritten images has served as the basis for benchmarking classification algorithms. As new machine learning techniques emerge, MNIST remains a reliable resource for researchers and learners alike.
