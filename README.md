@@ -5,7 +5,7 @@ I have recently (Nov 2023) begun studying deep learning/neural networks. This is
 
 ## Table of Contents: (Links to coursework in this repository)
 1. (**WIP**) [Deep Learning Specialization by Andrew Ng (Coursera)](https://github.com/markCwatson/deep_learning/tree/main/coursera/deep_learning_specialization/)
-2. (**WIP**) [Intro to Deep Learning (Kaggle Learn)](https://github.com/markCwatson/deep_learning/tree/main/kaggle/learn/intro_to_deep_learning/)
+2. (completed) [Intro to Deep Learning (Kaggle Learn)](https://github.com/markCwatson/deep_learning/tree/main/kaggle/learn/intro_to_deep_learning/)
 
 ## Other courses/training/certifications under consideration
 1. [Artificial Intelligence Professional Program from Stanford School of Engineering](https://online.stanford.edu/programs/artificial-intelligence-professional-program)
