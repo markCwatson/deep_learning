@@ -5,35 +5,35 @@
 
 import numpy as np
 
-"""
-Pad with zeros all images of the dataset X. The padding is applied to the height and width of an image, 
-as illustrated in Figure 1.
+def zero_pad(X, pad):
+    """
+    Pad with zeros all images of the dataset X. The padding is applied to the height and width of an image, 
+    as illustrated in Figure 1.
 
-Argument:
-X -- python numpy array of shape (m, n_H, n_W, n_C) representing a batch of m images
-pad -- integer, amount of padding around each image on vertical and horizontal dimensions
+    Argument:
+    X -- python numpy array of shape (m, n_H, n_W, n_C) representing a batch of m images
+    pad -- integer, amount of padding around each image on vertical and horizontal dimensions
 
-Returns:
-X_pad -- padded image of shape (m, n_H + 2 * pad, n_W + 2 * pad, n_C)
-"""
-def zero_pad(X, pad):    
+    Returns:
+    X_pad -- padded image of shape (m, n_H + 2 * pad, n_W + 2 * pad, n_C)
+    """ 
     X_pad = np.pad(X, ((0, 0), (pad, pad), (pad, pad), (0, 0)), mode='constant', constant_values=(0,0))
     
     return X_pad
 
-"""
-Apply one filter defined by parameters W on a single slice (a_slice_prev) of the output activation 
-of the previous layer.
-
-Arguments:
-a_slice_prev -- slice of input data of shape (f, f, n_C_prev)
-W -- Weight parameters contained in a window - matrix of shape (f, f, n_C_prev)
-b -- Bias parameters contained in a window - matrix of shape (1, 1, 1)
-
-Returns:
-Z -- a scalar value, the result of convolving the sliding window (W, b) on a slice x of the input data
-"""
 def conv_single_step(a_slice_prev, W, b):
+    """
+    Apply one filter defined by parameters W on a single slice (a_slice_prev) of the output activation 
+    of the previous layer.
+
+    Arguments:
+    a_slice_prev -- slice of input data of shape (f, f, n_C_prev)
+    W -- Weight parameters contained in a window - matrix of shape (f, f, n_C_prev)
+    b -- Bias parameters contained in a window - matrix of shape (1, 1, 1)
+
+    Returns:
+    Z -- a scalar value, the result of convolving the sliding window (W, b) on a slice x of the input data
+    """
     # Element-wise product between a_slice_prev and W. Do not add the bias yet.
     s = np.multiply(a_slice_prev, W)
     # Sum over all entries of the volume s.
@@ -43,21 +43,21 @@ def conv_single_step(a_slice_prev, W, b):
 
     return Z
 
-"""
-Implements the forward propagation for a convolution function
+def conv_forward(A_prev, W, b, hparameters):
+    """
+    Implements the forward propagation for a convolution function
 
-Arguments:
-A_prev -- output activations of the previous layer, 
-    numpy array of shape (m, n_H_prev, n_W_prev, n_C_prev)
-W -- Weights, numpy array of shape (f, f, n_C_prev, n_C)
-b -- Biases, numpy array of shape (1, 1, 1, n_C)
-hparameters -- python dictionary containing "stride" and "pad"
-    
-Returns:
-Z -- conv output, numpy array of shape (m, n_H, n_W, n_C)
-cache -- cache of values needed for the conv_backward() function
-"""
-def conv_forward(A_prev, W, b, hparameters): 
+    Arguments:
+    A_prev -- output activations of the previous layer, 
+        numpy array of shape (m, n_H_prev, n_W_prev, n_C_prev)
+    W -- Weights, numpy array of shape (f, f, n_C_prev, n_C)
+    b -- Biases, numpy array of shape (1, 1, 1, n_C)
+    hparameters -- python dictionary containing "stride" and "pad"
+        
+    Returns:
+    Z -- conv output, numpy array of shape (m, n_H, n_W, n_C)
+    cache -- cache of values needed for the conv_backward() function
+    """
     # Retrieve dimensions from A_prev's shape 
     (m, n_H_prev, n_W_prev, n_C_prev) = A_prev.shape
     
@@ -114,19 +114,19 @@ def conv_forward(A_prev, W, b, hparameters):
     
     return Z, cache
 
-"""
-Implements the forward pass of the pooling layer
+def pool_forward(A_prev, hparameters, mode="max"):
+    """
+    Implements the forward pass of the pooling layer
 
-Arguments:
-A_prev -- Input data, numpy array of shape (m, n_H_prev, n_W_prev, n_C_prev)
-hparameters -- python dictionary containing "f" and "stride"
-mode -- the pooling mode you would like to use, defined as a string ("max" or "average")
+    Arguments:
+    A_prev -- Input data, numpy array of shape (m, n_H_prev, n_W_prev, n_C_prev)
+    hparameters -- python dictionary containing "f" and "stride"
+    mode -- the pooling mode you would like to use, defined as a string ("max" or "average")
 
-Returns:
-A -- output of the pool layer, a numpy array of shape (m, n_H, n_W, n_C)
-cache -- cache used in the backward pass of the pooling layer, contains the input and hparameters 
-"""
-def pool_forward(A_prev, hparameters, mode="max"): 
+    Returns:
+    A -- output of the pool layer, a numpy array of shape (m, n_H, n_W, n_C)
+    cache -- cache used in the backward pass of the pooling layer, contains the input and hparameters 
+    """
     # Retrieve dimensions from the input shape
     (m, n_H_prev, n_W_prev, n_C_prev) = A_prev.shape
     
@@ -175,23 +175,23 @@ def pool_forward(A_prev, hparameters, mode="max"):
     cache = (A_prev, hparameters)
     
     return A, cache
+   
+def conv_backward(dZ, cache):
+    """
+    Implement the backward propagation for a convolution function
 
-"""
-Implement the backward propagation for a convolution function
+    Arguments:
+    dZ -- gradient of the cost w.r.t the output of the conv layer (Z), numpy array of shape (m, n_H, n_W, n_C)
+    cache -- cache of values needed for the conv_backward(), output of conv_forward()
 
-Arguments:
-dZ -- gradient of the cost w.r.t the output of the conv layer (Z), numpy array of shape (m, n_H, n_W, n_C)
-cache -- cache of values needed for the conv_backward(), output of conv_forward()
-
-Returns:
-dA_prev -- gradient of the cost with respect to the input of the conv layer (A_prev),
-            numpy array of shape (m, n_H_prev, n_W_prev, n_C_prev)
-dW -- gradient of the cost with respect to the weights of the conv layer (W)
-        numpy array of shape (f, f, n_C_prev, n_C)
-db -- gradient of the cost with respect to the biases of the conv layer (b)
-        numpy array of shape (1, 1, 1, n_C)
-"""    
-def conv_backward(dZ, cache):   
+    Returns:
+    dA_prev -- gradient of the cost with respect to the input of the conv layer (A_prev),
+                numpy array of shape (m, n_H_prev, n_W_prev, n_C_prev)
+    dW -- gradient of the cost with respect to the weights of the conv layer (W)
+            numpy array of shape (f, f, n_C_prev, n_C)
+    db -- gradient of the cost with respect to the biases of the conv layer (b)
+            numpy array of shape (1, 1, 1, n_C)
+    """ 
     # Retrieve information from "cache"
     (A_prev, W, b, hparameters) = cache
     
@@ -254,33 +254,32 @@ def conv_backward(dZ, cache):
     assert(dA_prev.shape == (m, n_H_prev, n_W_prev, n_C_prev))
     
     return dA_prev, dW, db
-
-"""
-Creates a mask from an input matrix x, to identify the max entry of x.
-
-Arguments:
-x -- Array of shape (f, f)
-
-Returns:
-mask -- Array of the same shape as window, contains a True at the position corresponding to the max entry of x.
-"""    
+  
 def create_mask_from_window(x):
+    """
+    Creates a mask from an input matrix x, to identify the max entry of x.
+
+    Arguments:
+    x -- Array of shape (f, f)
+
+    Returns:
+    mask -- Array of the same shape as window, contains a True at the position corresponding to the max entry of x.
+    """
     mask = (x == np.max(x))
 
     return mask
 
-"""
-Distributes the input value in the matrix of dimension shape
-
-Arguments:
-dz -- input scalar
-shape -- the shape (n_H, n_W) of the output matrix for which we want to distribute the value of dz
-
-Returns:
-a -- Array of size (n_H, n_W) for which we distributed the value of dz
-"""
 def distribute_value(dz, shape):
+    """
+    Distributes the input value in the matrix of dimension shape
 
+    Arguments:
+    dz -- input scalar
+    shape -- the shape (n_H, n_W) of the output matrix for which we want to distribute the value of dz
+
+    Returns:
+    a -- Array of size (n_H, n_W) for which we distributed the value of dz
+    """
     # Retrieve dimensions from shape
     (n_H, n_W) = shape
     
@@ -292,18 +291,18 @@ def distribute_value(dz, shape):
     
     return a
 
-"""
-Implements the backward pass of the pooling layer
+def pool_backward(dA, cache, mode = "max"):
+    """
+    Implements the backward pass of the pooling layer
 
-Arguments:
-dA -- gradient of cost with respect to the output of the pooling layer, same shape as A
-cache -- cache output from the forward pass of the pooling layer, contains the layer's input and hparameters 
-mode -- the pooling mode you would like to use, defined as a string ("max" or "average")
+    Arguments:
+    dA -- gradient of cost with respect to the output of the pooling layer, same shape as A
+    cache -- cache output from the forward pass of the pooling layer, contains the layer's input and hparameters 
+    mode -- the pooling mode you would like to use, defined as a string ("max" or "average")
 
-Returns:
-dA_prev -- gradient of cost with respect to the input of the pooling layer, same shape as A_prev
-"""
-def pool_backward(dA, cache, mode = "max"):    
+    Returns:
+    dA_prev -- gradient of cost with respect to the input of the pooling layer, same shape as A_prev
+    """
     # Retrieve information from cache
     (A_prev, hparameters) = cache
     
