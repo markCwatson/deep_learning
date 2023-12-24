@@ -24,7 +24,8 @@ I have recently (Nov 2023) begun studying deep learning/neural networks. This is
 
 ## Helpful YouTube playlists
 1. [Neural Networks: Zero to Hero by Andrej Karpathy](https://youtube.com/playlist?list=PLAqhIrjkxbuWI23v9cThsA9GvCAUhRvKZ&si=JERfwNOSbS1v1FiE)
-2. [Neural Networks by 3Blue1Brown](https://youtube.com/playlist?list=PLZHQObOWTQDNU6R1_67000Dx_ZCJB-3pi&si=ymLyI-663BybkXoO)
+2. [Standford's CS231n (Winter 2016) by Andrej Karpathy](https://youtube.com/playlist?list=PLkt2uSq6rBVctENoVBg1TpCC7OQi31AlC&si=DYrChFbwabUE0tr-)
+3. [Neural Networks by 3Blue1Brown](https://youtube.com/playlist?list=PLZHQObOWTQDNU6R1_67000Dx_ZCJB-3pi&si=ymLyI-663BybkXoO)
 
 ## Kaggle
 At the time of this writing (Dec 10, 2023), I am considering using [kaggle](https://www.kaggle.com/) as both an additional learning resource and as a place to practice using real ML problems. I've created an account, and my progress can be viewed ([here](https://www.kaggle.com/markcwatson)).
