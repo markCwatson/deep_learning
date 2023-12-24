@@ -4,7 +4,7 @@
 I have recently (Nov 2023) begun studying deep learning/neural networks. This is a collection of coursework from various deep learning courses I am taking. As of today (Dec 10, 2023), I am currently doing the [Deep Learning Specialization by Andrew Ng on Coursera](https://www.coursera.org/specializations/deep-learning?).
 
 ## Table of Contents: (Links to coursework in this repository)
-1. (**WIP**) [Deep Learning Specialization by Andrew Ng (Coursera)](https://github.com/markCwatson/deep_learning/tree/main/coursera/deep_learning_specialization/)
+1. (completed) [Deep Learning Specialization by Andrew Ng (Coursera)](https://github.com/markCwatson/deep_learning/tree/main/coursera/deep_learning_specialization/)
 2. (completed) [Intro to Deep Learning (Kaggle Learn)](https://github.com/markCwatson/deep_learning/tree/main/kaggle/learn/intro_to_deep_learning/)
 
 ## Other courses/training/certifications under consideration
