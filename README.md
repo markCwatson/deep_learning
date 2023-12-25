@@ -1,7 +1,7 @@
 # Deep Learning (Neural Networks)
 
 ## About
-I have recently (Nov 2023) begun studying deep learning/neural networks. This is a collection of coursework from various deep learning courses I am taking. As of today (Dec 10, 2023), I am currently doing the [Deep Learning Specialization by Andrew Ng on Coursera](https://www.coursera.org/specializations/deep-learning?).
+I have recently (Nov 2023) begun studying deep learning/neural networks. This is a collection of coursework from various deep learning courses I am taking.
 
 ## Table of Contents: (Links to coursework in this repository)
 1. (in progress) [CS231n Convolutional Neural Networks for Visual Recognition by Andrej Karpathy (Stanford)](https://github.com/markCwatson/deep_learning/tree/main/cs231n)
@@ -28,4 +28,4 @@ I have recently (Nov 2023) begun studying deep learning/neural networks. This is
 2. [Neural Networks by 3Blue1Brown](https://youtube.com/playlist?list=PLZHQObOWTQDNU6R1_67000Dx_ZCJB-3pi&si=ymLyI-663BybkXoO)
 
 ## Kaggle
-At the time of this writing (Dec 10, 2023), I am considering using [kaggle](https://www.kaggle.com/) as both an additional learning resource and as a place to practice using real ML problems. I've created an account, and my progress can be viewed ([here](https://www.kaggle.com/markcwatson)).
+At the time of this writing (Dec 10, 2023), I have begun using [kaggle](https://www.kaggle.com/) as both an additional learning resource and as a place to practice using real ML problems. I've created an account, and my progress can be viewed ([here](https://www.kaggle.com/markcwatson)).
