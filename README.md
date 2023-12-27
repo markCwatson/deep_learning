@@ -1,7 +1,7 @@
 # Deep Learning (Neural Networks)
 
 ## About
-I have recently (Nov 2023) begun studying deep learning/neural networks. This is a collection of coursework from various deep learning courses I am taking.
+In Dec 2023, I begun studying deep learning/neural networks. This is a collection of coursework from various deep learning courses I am taking.
 
 ## Table of Contents: (Links to coursework in this repository)
 1. (in progress) [CS231n Convolutional Neural Networks for Visual Recognition by Andrej Karpathy (Stanford)](https://github.com/markCwatson/deep_learning/tree/main/cs231n)
