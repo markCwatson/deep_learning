@@ -1,5 +1,5 @@
 # Lecture 4: Backpropagation, Neural Networks 1
-These notes are based primarily on the YouTube video [CS231n Winter 2016: Lecture 4: Backpropagation, Neural Networks 1][youtube]. I also  supplemented this information using the official course notes on [backpropagation][cs231n-l2-1] and [neural networks][cs231n-l2-2]. I am also using [slides from the 2016 lecture presentation][slides].
+These notes are based primarily on the YouTube video [CS231n Winter 2016: Lecture 4: Backpropagation, Neural Networks 1][youtube]. I also  supplemented this information using the official course notes on [backpropagation][cs231n-l2-1] and [neural networks][cs231n-l2-2]. I am also using [slides from the 2016 lecture 4 presentation][slides].
 
 ## Gradients in Backpropagation
 - Backpropagation is a recursive application of the *chain rule* along a computational graph to compute the gradient of all inputs/parameters/intermediates.
@@ -76,4 +76,4 @@ class Neuron(object):
 [youtube]:https://youtu.be/i94OvYb6noo?si=JITp3WDXwvp2xmEv
 [cs231n-l2-1]:https://cs231n.github.io/optimization-2/
 [cs231n-l2-2]: https://cs231n.github.io/neural-networks-1/
-[slides]:http://cs231n.stanford.edu/slides/2016/
+[slides]:http://cs231n.stanford.edu/slides/2016/winter1516_lecture4.pdf
