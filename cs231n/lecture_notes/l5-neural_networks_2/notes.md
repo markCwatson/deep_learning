@@ -159,9 +159,65 @@ W = np.random.randn(n) * sqrt(2.0 / n)
 
 ### Batch Normalization
 - Explicitly forces the activations throughout a network to take on a unit gaussian distribution at the beginning of the training.
-- Amounts to insert the BatchNorm layer immediately after fully connected layers (or convolutional layers) and before non-linearities.
+- Amounts to insert the BatchNorm layer immediately after fully connected layers (or convolutional layers) and before the nonlinearity.
+- Takes $x^{(k)}$ and turns it into a unit gaussian.
 
-**INCOMPLETE - TO BE CONTINUED**
+$$\hat{x}^{(k)} = \frac{x^{(k)} - E[x^{(k)}]}{\sqrt{Var[x^{(k)}]}}$$
+
+- Note: $\tanh$ doesn't necessarily want it's input to be a unit gaussian, so you can let the network learn $\gamma = \sqrt{Var[x^{(k)}]}$ and $\beta = E[x^{(k)}]$ to undo this mapping. Thus, $y^{(k)}$ would be the input to $\tanh$.
+
+$$y^{(k)} = \gamma ^{(k)} \hat{x}^{(k)} + \beta ^{(k)}$$
+
+- So the batch normalization algorithm is as follows:
+    1. compute the mini-batch mean: $\mu = \frac{1}{m} \sum_{i=1}^m x_i$
+    2. compute the mini-batch variance: $\sigma ^2 = \frac{1}{m} \sum_{i=1}^m (x_i = \mu)^2$
+    3. normalize: $\hat{x}^{(k)} = \frac{x^{(k)} - \mu}{\sqrt{\sigma ^2 + \epsilon}}$
+    4. scale and shift: $y^{(k)} = \gamma ^{(k)} \hat{x}^{(k)} + \beta ^{(k)}$
+
+- note: at test time, mean/std are not computed on the batch (use a fixed empirical mean computed during training).
+- Benefits of batch normalization:
+    - improves gradient flow through network
+    - allows higher learning rates
+    - reduces dependence on initialization
+    - acts as a form of regularization and slightly reduces the need for dropout (maybe)
+
+## Babysitting the Learning Process
+- Run one forward pass and make sure loss is loss $L \sim -\log{1 / N}$, the $N$ is the number of classes (shows there is a diffuse distribution).
+- Add regularization and expect loss to go up a bit (there is an additional term in the objective).
+- Over-fit a small piece of the training data ($L \rightarrow 0$).
+- Add small regularization and find a learning rate that makes the loss go down.
+- When you increase learning rate and things blow up, it's too high.
+
+## Hyperparameter Optimization
+- Use coarse then fine approach:
+    - First stage: only a few epochs to get rough idea of what params work.
+    - Second stage: longer running time, finer search.
+    - Repeat as necessary.
+- Tip: if $L_i > 3 * L_1$, then stop early.
+- Use random searching for hyperparamer values because you'll be sure to not waste time on unimportant parameters:
+
+<p align="center">
+    <img src="./images/img12.png" alt="Grid vs random search" width="75%" height="auto">
+</p>
+
+- Hyperparameters to play with:
+    - Network architecture
+    - learning rate, its decay schedule, update type
+    - regularization (L2/dropout strength)
+- Monitor and visualize loss curve
+
+<p align="center">
+    <img src="./images/img13.png" alt="Loss curves" width="75%" height="auto">
+</p>
+
+- Monitor the accuracy (can reveal variance)
+
+<p align="center">
+    <img src="./images/img14.png" alt="Accuracy curves" width="75%" height="auto">
+</p>
+
+- Track the ratio of weight updates / weight magnitudes (want to be around 0.001).
+- You don't want the updates to be large compared to the weights.
 
 [youtube]:https://youtu.be/gYpoJMlgyXA?si=tZqQd6oqfmjcBIV0
 [cs231n-l2-1]:https://cs231n.github.io/neural-networks-1/
