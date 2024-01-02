@@ -73,7 +73,7 @@ def svm_loss_naive(W, X, y, reg):
 
     # Add regularization to the gradient
     # L2 regularization for L includes reg * W^2 term
-    # Taking dL/dW of this yields reg * W
+    # Taking dL/dW of this yields 2 * reg * W
     dW += 2 * reg * W
 
     # *****END OF YOUR CODE (DO NOT DELETE/MODIFY THIS LINE)*****
